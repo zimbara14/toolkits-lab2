@@ -2,7 +2,7 @@
 
 This is a command line game for one player.
 
-Current version: 1.0.0
+Current version: v1.2.1
 
-### Description
+## Description
 The game is pretty straightforward, with clear instructions.
