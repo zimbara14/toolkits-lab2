@@ -4,6 +4,7 @@ x = random.randint(1, 100)
 print("You have 5 chances to guess the number between 1 and 100.")
 
 count = 0
+flag = None
 
 while count < 5:
     guess = int(input("Your guess: "))
@@ -11,9 +12,11 @@ while count < 5:
         print("Warning! One more guess left.")
     if count == 4 and x is not guess:
         print("Oops! Game over. The number you failed to guess was: " + str(x) + ".")
+        flag = False
         break
     if x == guess:
         print("Congratulations! You guessed the number, and it's: " + str(guess) + ".")
+        flag = True
         break
     if count < 1:
         if guess < x:
@@ -55,3 +58,7 @@ while count < 5:
         else:
             print("Try with a number between " + str(temp2) + " and " + str(g2) + ".")
     count += 1
+
+
+def result():
+    return flag
